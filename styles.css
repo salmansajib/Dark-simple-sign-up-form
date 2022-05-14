@@ -1,0 +1,247 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* ===================  end of css resets  =================== */
+
+:root {
+  --clr-main-bg: hsl(0, 0%, 0%);
+  --clr-accent-1: hsl(280, 99%, 56%);
+  --clr-accent-2: hsl(238, 84%, 58%);
+  --clr-text-light: hsl(0, 0%, 98%);
+  --clr-text-gray: hsl(210, 11%, 71%);
+  --clr-border: hsla(0, 0%, 100%, 20%);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(0, 0%, 5%);
+}
+
+h1 {
+  font-weight: 600;
+  line-height: 1.1;
+  font-size: 1.625rem;
+}
+
+p {
+  font-weight: 300;
+  font-size: 0.95rem;
+}
+
+.split {
+  display: flex;
+  align-items: center;
+}
+
+.main-container {
+  width: 390px;
+  background-color: var(--clr-main-bg);
+  color: var(--clr-text-light);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+}
+
+.header {
+  margin-bottom: 5rem;
+  gap: 1rem;
+}
+
+.back-button {
+  background-color: transparent;
+  color: var(--clr-text-light);
+  border: 2px solid var(--clr-border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  padding: 0.3rem 0.8rem;
+}
+
+.back-button:hover,
+.back-button:focus {
+  border-color: var(--clr-accent-1);
+  cursor: pointer;
+}
+
+.alternative-signup > p {
+  color: var(--clr-text-gray);
+}
+
+.alternative-signup__buttons {
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.google-button {
+  flex-basis: 50%;
+}
+
+.apple-button {
+  flex-basis: 50%;
+}
+
+.google-button,
+.apple-button {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  background: transparent;
+  color: var(--clr-text-light);
+  border: 2px solid var(--clr-border);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.google-button:hover,
+.google-button:focus,
+.apple-button:hover,
+.apple-button:focus {
+  border-color: var(--clr-accent-1);
+}
+
+form {
+  margin-block: 2rem;
+}
+
+form > * + * {
+  margin-top: 1.5rem;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 0.2rem;
+  margin-left: 0.2rem;
+
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  padding-block: 0.6rem;
+}
+
+#user-name,
+#user-email,
+#user-password {
+  background: transparent;
+  border: 2px solid var(--clr-border);
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  color: var(--clr-text-light);
+  outline: none;
+}
+
+#user-name:hover,
+#user-email:hover,
+#user-password:hover {
+  border-color: hsla(280, 99%, 56%, 70%);
+}
+
+#user-name:focus,
+#user-email:focus,
+#user-password:focus {
+  border-color: var(--clr-accent-1);
+}
+
+.submit-button {
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    var(--clr-accent-1),
+    var(--clr-accent-2)
+  );
+  color: var(--clr-text-light);
+  border: none;
+  border-radius: 0.5rem;
+  padding-block: 0.7rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background: linear-gradient(
+    to right,
+    var(--clr-accent-2),
+    var(--clr-accent-1)
+  );
+  cursor: pointer;
+}
+
+.footer {
+  width: max-content;
+  margin-inline: auto;
+  font-size: 1rem;
+  color: var(--clr-text-gray);
+}
+
+.log-in {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--clr-text-light);
+}
+
+.log-in:hover {
+  text-decoration: underline;
+  color: var(--clr-accent-1);
+}
+
+@media only screen and (max-width: 500px) {
+  .main-container {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Font awesome/css/all.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="header split">
+        <button class="back-button">
+          <i class="fa-solid fa-angle-left"></i>
+        </button>
+        <h1>Sign up</h1>
+      </div>
+
+      <div class="alternative-signup">
+        <p>Sign up with one following options.</p>
+        <div class="alternative-signup__buttons split">
+          <button class="google-button">
+            <i class="fa-brands fa-google"></i>
+          </button>
+          <button class="apple-button">
+            <i class="fa-brands fa-apple"></i>
+          </button>
+        </div>
+      </div>
+
+      <form action="#">
+        <div class="name-wrapper">
+          <label for="user-name" class="name-label">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="user-name"
+            placeholder="Your name"
+            autocomplete="0ff"
+            required
+          />
+        </div>
+        <div class="email-wrapper">
+          <label for="user-email" class="email-label">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="user-email"
+            placeholder="yourmail&#64;email.com"
+            autocomplete="0ff"
+            required
+          />
+        </div>
+        <div class="password-wrapper">
+          <label for="user-password" class="password-label">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="user-password"
+            placeholder="6&#43 character"
+            autocomplete="0ff"
+            required
+          />
+        </div>
+        <button class="submit-button">Create account</button>
+      </form>
+      <p class="footer">Already have an account? <span><a class="log-in" href="#">Log in</a> </span></p>
+    </main>
+  </body>
+</html>
